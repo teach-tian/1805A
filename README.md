@@ -70,3 +70,40 @@
 
      isNaN();   is not a number?    是 不是一个数？  true/false
      如果是一个数或者通过Number（）转换成一个数 则返回 false 否则返回true
+     
+   ### Boolean   有两个值  true  false
+
+
+    typeof a  返回a的数据类型
+
+    Boolean();将其他数据类型转换成Boolean类型
+         数据类型     转换成false的值
+    <1>  Number          0/NaN
+    <2>  String           ""
+    <3>  Undefined        undefined
+    <4>  Null             null
+    <5> Boolean           false
+
+    Boolean()转换引用数据类型 都转换成true
+
+，
+
+   ### Undefined 只有一个值 undefined  , 只声明不赋值       var a;
+
+
+   ### Null  只有一个值null, typeof null==object
+
+
+    null==undefined
+
+   ### String: 字符串必须被引号包裹
+
+    String();把其他数据类型转换层字符串类型
+
+
+    a.toString(); a不可以是null 和undefined
+
+
+   字符串有length属性，表示字符串长度
+
+   字符串可以通过下标获取相应的字符
