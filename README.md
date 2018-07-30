@@ -214,4 +214,76 @@
      4.< <= > >=  == != === !==
      5. &&  ||
      6.=
+     
+### 语句：
+     if判断语句
+      1.单支判断语句  if（添加）语句；
+    var box=100;
+    if(box>50) {alert("box大于50");alert("hello world")};
+
+     2.双支条件判断语句：
+    if(box>50) {alert("box大于50");}else {alert("box不大于50")}
+
+    3.多支条件判断语句：
+    var num=75;
+    if(num>=90)
+    { alert("A级")}
+    else if(num>=80)
+    {alert("B级")}
+    else if(num>=70)
+    {alert("C级")}
+    else if(num>=60)
+    {alert("D级")}
+    else {alert("不及格")}
+
+## switch判断语句
+    switch(值){
+     case 1:
+     语句1；
+     break;
+     case 2:
+     语句2；
+     break;
+     case 3:
+     语句3；
+     break;
+     default:
+     语句4；
+    }
+
+    while循环语句：  先判断，后执行
+    while(循环条件){
+       循环语句
+    }
+
+
+    先执行，后判断
+    do{
+    循环语句
+    }while(循环条件)
+
+    for(){}
+
+    */
+
+  //  1+2+3+...+100=?
+  var sum=0;
+   for(var i=1;i<=100;i++){
+       sum+=a;
+   }
+   console.log(sum);
+    console.log(i);//101
+// 第一步： var i=1;
+    //第二步：i<=100；   如果返回false 循环终止
+    //第三步：sum+=a;
+    //第四步：i++；  跌代语句
+    //第五步：重复二到四步
+
+    // for循环 写出 56---1024  所有整数的和
+    var sum=0;
+
+    for(var a=56;a<=1024;a++){
+        sum+=a;
+    }
+    console.log(sum);
 
