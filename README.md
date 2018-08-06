@@ -337,4 +337,69 @@
                   var arr=['刘子豪','陈浩然','刘博','李永林']
                   var a=arr.join("+");
                   console.log(a,arr);
+                  
+                  
+   ### String方法
+      
+      ```
+              charAt()；     查找指定索引对应的字符
+              charCodeAt();  查找指定索引对应的Unicode编码
+              concat();      字符串拼接  ps:（参数多个）
+              var str="hello world";
+              var str1="lover";
+              var b=str.concat(str1);  //str+str1 
+              indexOf();     查找指定字符对应的索引
+               ps: 两个参数，第一个参数是要查找的字符
+                             第二个参数是开始查找的位置
+                    查找不到返回-1
+               lastIndexOf()；查找指定字符对应的索引（从后往前）
+
+               substr(); 从原字符串中获取子串
+               ps:两个参数 ，第一个参数开始获取的索引
+                             第二个参数获取的个数(不传默认获取到最后)
+
+               substring();从原字符串中获取子串
+               ps:两个参数 ， 第一个参数开始获取的索引
+                              第二个参数结束时的索引(不包括第二个参数)
+                slice();从原字符串中获取子串
+                ps:两个参数 ， 第一个参数开始获取的索引
+                              第二个参数结束时的索引(不包括第二个参数)
+                toUpperCase();  小写转换成大写           
+                toLowerCase();  大写转换成小写
+                split();将字符串以指定字符分割成数组
+                var str="hello world!";
+                var b=str.split("o");//["hell", "w", "rld!"]
+                var str="a";
+            var b="b";
+            var c=b.localeCompare(b);    //比目标字符小返回 -1
+                                         //比目标字符大返回1
+            console.log(c);              //和目标字符串相等返回0                 
+                  
+                  
+```
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
 
