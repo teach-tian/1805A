@@ -442,8 +442,9 @@ functionresizeWin(){
     myWindow.focus();
 }
 ```
-### screen：屏幕  也是window的一个对象，在使用的时候可以用window.screen，也可以把window省略掉。
+### screen：屏幕 
 ```
+也是window的一个对象，在使用的时候可以用window.screen，也可以把window省略掉。
 屏幕的常用属性：宽、高；可用宽、可用高（可用高不包括任务栏）
 
 varscrWidth = window.screen.width;
