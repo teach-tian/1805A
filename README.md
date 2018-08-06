@@ -341,7 +341,7 @@
                   
    ### String方法
       
-      ```
+ ```
               charAt()；     查找指定索引对应的字符
               charCodeAt();  查找指定索引对应的Unicode编码
               concat();      字符串拼接  ps:（参数多个）
@@ -376,6 +376,23 @@
             console.log(c);              //和目标字符串相等返回0                 
                   
                   
+```
+
+### BOM对象有哪些，列举window对象？
+
+```
+1、window对象 ，是JS的最顶层对象，其他的BOM对象都是window对象的属性；
+
+2、document对象，文档对象；
+
+3、location对象，浏览器当前URL信息；
+
+4、navigator对象，浏览器本身信息；
+
+5、screen对象，客户端屏幕信息；
+
+6、history对象，浏览器访问历史信息
+
 ```
                   
                   
