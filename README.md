@@ -394,25 +394,124 @@
 6、history对象，浏览器访问历史信息
 
 ```
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
+#           BOM概念：browser object model
+
+常用对象
+
+### Window：窗口，浏览器的窗口
+```
+我们定义的全局变量和全局函数都是window对象的属性和方法。
+
+var a = 1;
+function test(){
+    var a = 2;
+    alert(a);
+    alert(window.a);
+}
+
+全局变量是window的属性
+
+全局函数是window的方法
+
+窗口body的宽度：window.innerWidth
+
+窗口body的宽度：window.innerHeight
+
+常用的方法：open：打开一个新的窗口。要传入三个参数（第一个：将要打开浏览器的路径；第二个：打开的方式；第三个：对于新打开的浏览器的描述（宽和高等））
+
+myWindow =window.open("http://www.baidu.com","_blank","width = 200,height = 300");
+
+close：关闭一个窗口。
+
+mywindow.close();
+
+moveTo：移动一个窗口。以窗口的左上角为坐标起点，但是新窗口的路径要为空（一般很少用）
+
+focus：使窗口获得焦点
+
+functionremoveWin(){
+    //一个窗口的左上角为移动窗口的坐标
+    myWindow.moveTo(200,200);
+    myWindow.focus();//窗口获得焦点
+}
+
+resizeTo：改变新窗口的大小，但是新窗口的路径要为空
+
+functionresizeWin(){
+    myWindow.resizeTo(1000,5000);
+    myWindow.focus();
+}
+```
+### screen：屏幕  也是window的一个对象，在使用的时候可以用window.screen，也可以把window省略掉。
+```
+屏幕的常用属性：宽、高；可用宽、可用高（可用高不包括任务栏）
+
+varscrWidth = window.screen.width;
+var scrHeight =screen.height;//window可省略
+document.write("屏幕的宽："+ scrWidth + "屏幕的高："+ scrHeight + "</br>");
+var scrAvaWidth =screen.availWidth;
+var scrAvaHeight =screen.availHeight;
+document.write("屏幕的宽："+ scrAvaWidth +"屏幕的高：" + scrAvaHeight +"</br>");
+```
+### location：地址
+```
+常用属性：href：完整路径；port：端口号；pathname：路径名；protocol：协议。
+
+varhref = location.href;
+document.write("完整的路径:"+ href + "</br>");
+var port =location.port;
+document.write("端口号:"+ port + "</br>");
+var path =location.pathname;
+document.write("路径名:"+ path + "</br>");
+var pro =location.protocol;
+document.write("协议:"+ pro + "</br>");
+
+常用方法：
+
+打开一个新的路径（窗口）
+
+location.assign("http://www.runoob.com");
+
+刷新：普通刷新和强制刷新
+
+//普通刷新
+function reloadDoc(){
+    location.reload();//如果传值为true，那么就是强制刷新
+}
+```
+### history：历史记录
+```
+记录当前窗口的历史，可以进行页面的转换
+
+back：返回上一页
+
+forward：进入下一页
+
+<body>
+<button onclick="goBack()">返回上一页</button>
+<button onclick="goForward()">进入下一页</button>
+<button onclick="newDoc()">新的页面</button>
+</body>
+<script>
+    functiongoBack(){
+        history.back();
+    }
+    functiongoForward(){
+        history.forward();
+    }
+    functionnewDoc(){
+        location.assign("http://www.runoob.com");
+    }
+</script>
+
+go：进入确定的哪一页（-1时是返回上一个页面，1为下一个页面）
+
+history.back();
+
+history.forward();
+
+history.go(-1);             
+```               
                   
                   
                   
