@@ -513,8 +513,30 @@ history.forward();
 
 history.go(-1);             
 ```               
-                  
-                  
+# Math对象 
+```
+ Math.max();获取参数中最大的一个
+ var a=Math.max(1,2,3,4)
+ alert(a)4
+ Math.min();获取参数中最小的一个
+ var a=Math.min(1,2,3,4)
+ alert(a)1
+ Math.ceil();向上取整
+ var a=Math.ceil(0.1);
+ alert(a)  1
+ Math.floor();向下取整
+ var a=Math.floor(9.99);
+ alert(a) 9
+ Math.round()；四舍五入
+ var a=Math.round(0.49);
+ alert(a)
+ Math.random();随机数 [0,1)
+
+  Math.random()*(m-n)+n
+
+  Math.abs():取绝对值
+  Math.PI  圆周率
+```          
                   
                   
                   
