@@ -625,13 +625,16 @@ var oDiv=document.getElementsByTagName('div');
 
   属性	说明
 childNodes	获取当前元素节点的所有子节点
+children  // 获取所有的非空白节点
 firstChild	获取当前元素节点的第一个子节点  相当于childNodes[0]
+firstElementChild   获取第一个元素
 lastChild	获取当前元素节点的最后一个子节点  相当于childNodes[box.childNodes.length - 1]
-
+lastElementChild  获取最后一个元素节点
 parentNode	获取当前节点的父节点
-previousSibling	获取当前节点的前一个同级节点
-nextSibling	获取当前节点的后一个同级节点
+previousSibling	获取当前节点的前一个同级节点  previousElementSibling
+nextSibling	获取当前节点的后一个同级节点       nextElementSibling
 attributes	获取当前元素节点的所有属性节点集合
+getAttributeNode('id') 获取单个属性节点
 ```
 # DOM不单单可以查找节点，也可以创建节点、复制节点、插入节点、删除节点和替换节点。
 
