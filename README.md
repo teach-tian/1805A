@@ -610,6 +610,42 @@ var oDiv=document.getElementsByTagName('div');
   var text=oBox.innerHTML;
   var t=oBox.innerText; // 只获取文本 不包含标签
   
+  setAttribute('align','center');//设置属性和值
+  setAttribute('bbb','ccc');//设置自定义的属性和值
+  removeAttribute('style');//移除属性
+  
+  1.node节点属性
+节点可以分为元素节点、属性节点和文本节点，而这些节点又有三个非常有用的属性，分别为：nodeName、nodeType和nodeValue=
+
+节点类型	nodeName	nodeType	nodeValue
+元素	SPAN	         1	         null
+属性	属性名称id	2	     属性值box
+文本	#text          3	       文本内容(不包含html)
+注释	#comment	   8	       注释的内容
+
+  属性	说明
+childNodes	获取当前元素节点的所有子节点
+firstChild	获取当前元素节点的第一个子节点  相当于childNodes[0]
+lastChild	获取当前元素节点的最后一个子节点  相当于childNodes[box.childNodes.length - 1]
+
+parentNode	获取当前节点的父节点
+previousSibling	获取当前节点的前一个同级节点
+nextSibling	获取当前节点的后一个同级节点
+attributes	获取当前元素节点的所有属性节点集合
+```
+# DOM不单单可以查找节点，也可以创建节点、复制节点、插入节点、删除节点和替换节点。
+
+```
+方法	说明
+write()	     这个方法可以把任意字符串插入到文档中
+createElement()	创建一个元素节点
+appendChild()	将新节点追加到子节点列表的末尾
+createTextNode()	创建一个文件节点
+insertBefore()	将新节点插入在前面
+repalceChild()	将新节点替换旧节点
+cloneNode()	      复制节点
+removeChild()	移除节点
+
 ```
 
 
