@@ -537,8 +537,82 @@ history.go(-1);
   Math.abs():取绝对值
   Math.PI  圆周率
 ```          
-                  
-                  
+# 定时器
+```
+ 超时定时器  间歇定时器
+
+    间歇性   
+    var num=0;
+    var a=setInterval(function(){
+        num++;
+        if(num==5){
+            clearInterval(a);
+            //定时器 关闭后  一定要销毁 （提高性能）
+            a=null;
+        }
+        console.log('hello world')
+    },1000);
+
+
+   超时定时器
+
+   var b=setTimeout(function(){
+       console.log('hello world')
+   },1000)
+
+   clearTimeout(b);
+
+   b=null;
+```
+
+# 日期
+```
+var times=new Date();
+    console.log(times);
+    //获取日期对象中的年份
+    var year=times.getFullYear();
+    console.log(year);
+    //获取日期对象中的月份  0-11  
+    var month=times.getMonth()+1;
+    console.log(month);
+    //获取日期对象中的日  
+    var day=times.getDate();
+    console.log(day);
+    var hour=times.getHours();
+    console.log(hour);
+    //获取日期对象中的分钟
+    var minute=times.getMinutes();
+    console.log(minute);
+    //获取日期对象中的秒
+    var second=times.getSeconds();
+```
+
+# DOM
+
+```
+// 获取元素  四种方式   id  class   name   tagname
+
+//id   单个元素
+var oBox=document.getElementById('box');
+
+//   class   获取到多个元素  [ul.list]
+
+var oList=document.getElementsByClassName('list');
+
+//  name    不常用  一般来获取form表单元素 [input]
+var oTxt=document.getElementsByName('user');
+
+//tagname(标签名)   获取到一组元素 [div,div,div]
+var oDiv=document.getElementsByTagName('div');
+
+
+// 获取元素的内容  (包括标签)
+  var text=oBox.innerHTML;
+  var t=oBox.innerText; // 只获取文本 不包含标签
+  
+```
+
+
                   
                   
 
