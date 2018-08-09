@@ -649,9 +649,67 @@ repalceChild()	将新节点替换旧节点
 cloneNode()	      复制节点
 removeChild()	移除节点
 
+
+
+1.write()方法
+write()方法可以把任意字符串插入到文档中去。
+document.write('<p>这是一个段落！</p>')'	;	//输出任意字符串
+
+2.createElement()方法
+createElement()方法可以创建一个元素节点。
+document.createElement('p');					//创建一个元素节点
+
+3.appendChild()方法
+appendChild()方法讲一个新节点添加到某个节点的子节点列表的末尾上。
+	var box = document.getElementById('box');		//获取某一个元素节点
+	var p = document.createElement('p');			//创建一个新元素节点<p>
+	box.appendChild(p);						//把新元素节点<p>添加子节点末尾
+
+4.createTextNode()方法
+createTextNode()方法创建一个文本节点。
+	var text = document.createTextNode('段落');		//创建一个文本节点
+	p.appendChild(text);						//将文本节点添加到子节点末尾
+5.insertBefore()方法
+insertBefore()方法可以把节点创建到指定节点的前面。
+box.parentNode.insertBefore(p, box);			//把<div>之前创建一个节点
+PS：insertBefore()方法可以给当前元素的前面创建一个节点，但却没有提供给当前元素的后面创建一个节点。那么，我们可以用已有的知识创建一个insertAfter()函数。
+function insertAfter(newElement, targetElement) {
+//得到父节点
+	var parent = targetElement.parentNode;		
+//如果最后一个子节点是当前元素，那么直接添加即可	
+	if (parent.lastChild === targetElement) {
+		parent.appendChild(newElement);
+	} else {
+//否则，在当前节点的下一个节点之前添加
+		parent.insertBefore(newElement, targetElement.nextSibling);
+	}
+}
+PS：createElement在创建一般元素节点的时候，浏览器的兼容性都还比较好。但在几个特殊标签上，比如iframe、input中的radio和checkbox、button元素中，可能会在IE6,7以下的浏览器存在一些不兼容。
+	var input = null;
+	if (BrowserDetect.browser == 'Internet Explorer' && BrowserDetect.version <= 7) {
+//判断IE6,7，使用字符串的方式
+		input = document.createElement("<input type=\"radio\" name=\"sex\">");
+	} else {
+//标准浏览器，使用标准方式
+		input = document.createElement('input');
+		input.setAttribute('type', 'radio');
+		input.setAttribute('name', 'sex');
+	}
+	document.getElementsByTagName('body')[0].appendChild(input);
+
+6.repalceChild()方法
+replaceChild()方法可以把节点替换成指定的节点。
+box.parentNode.replaceChild(p,box);			//把<div>换成了<p>
+
+7.cloneNode()方法
+cloneNode()方法可以把子节点复制出来。
+	var box = document.getElementById('box');		
+	var clone = box.firstChild.cloneNode(true);		//获取第一个子节点，true表示复制内容
+	box.appendChild(clone);						//添加到子节点列表末尾
+8.removeChild()方法
+removeChild()方法可以把
+box.parentNode.removeChild(box);			//删除指定节点
 ```
-
-
                   
                   
 
