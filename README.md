@@ -776,6 +776,48 @@ return false
 
 
 子元素比较多，而且事件相同的情况下，使用
+
+
+
+Event对象的一些兼容性写法
+获得event对象兼容性写法 
+event || (event = window.event);
+获得target兼容型写法 
+event.target||event.srcElement
+阻止浏览器默认行为兼容性写法 
+event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+阻止冒泡写法 
+event.stopPropagation ? event.stopPropagation() : (event.cancelBubble = true);
+```
+
+
+
+# 事件对象属性
+
+```
+  x   x坐标    距左边界的距离       IE中距父级容器左边界的距离
+
+
+            y   y坐标    距上边界的距离       IE中距父级容器上边界的距离
+
+
+            clientX      距左边界的距离
+
+
+            clientY      距上边界的距离
+
+
+            screenX      距屏幕左边界的距离
+
+
+            screenY      距屏幕上边界的距离
+
+
+            pageX        距左边界的距离       IE8不支持
+
+
+            pageY        距上边界的距离       IE8不支持
+
 ```
                   
 
