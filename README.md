@@ -874,8 +874,9 @@ event.stopPropagation ? event.stopPropagation() : (event.cancelBubble = true);
 	● 同一个浏览器，我们是否设置overflow="hidden"，对于最终的结果是有影响的（滚动条也占据宽度会影响）；
 
 	● 在不同的浏览器中我们获取到的结果也是不相同的
-8. scrollLeft/scrollTop（可读写属性）
-       滚动条卷去的宽度/高度 
+8. scrollLeft/scrollTop（可读写属性） 元素必须有 overflow：hidden/scroll;
+       滚动条卷去的宽度/高度
+9. ele.scrollTo(x,y)  等同于上
        
        
  注意：
