@@ -833,7 +833,7 @@ event.stopPropagation ? event.stopPropagation() : (event.cancelBubble = true);
 	  
 2.clientWidth/clientHeight（只读属性） 
 
-	● 内容的宽/高+左右/上下填充 （和内容是否溢出没有关系）(即不包含border值)
+	● 内容的宽/高+左右/上下padding （和内容是否溢出没有关系）(即不包含border值)
 
 	● 如果设置了box-sizing:border-box; 则clientWidth/clientHeight =容器宽/高- border
 	
