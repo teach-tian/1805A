@@ -24,24 +24,33 @@ ajax是一种用于创建快速动态网页的技术。通过在后台与服务�
 ```
 // https://www.cnblogs.com/zqzjs/p/4912623.html
 
-var xhr = null;
-
+        var xhr = null;
+         //第一步 创建XMLHttpRequet对象
         xhr = new XMLHttpRequest()
     
-    // 连接
-        console.log(xhr)
+         // 第二步: 调用 open(type,url,async)方法,  参数1：请求类型（get,post）;参数2：url   参数3：是否异步(true:异步，false:同步）
+     
         xhr.open("GET","http://localhost:3000",true);
        
-    
-        xhr.send(null)
-    
-    xhr.onreadystatechange = function(){
-        if(xhr.readyState == 4 && xhr.status == 200){
-            console.log(xhr.responseText);
-        }
-    }
-
-
+        // 第三步：调用send()方法  1个参数：作为请求主体发送的数据  ,   如果不需要，则必须传入null。
+        xhr.send(null);
+        //第四步：监听onreadystatechange事件，每次服务器相应数据都会触发该事件
+        xhr.onreadystatechange = function(){
+       //xhr.status    响应的HTTP状态码
+       ```
+       |HTTP状态码|状态字符串|说明|
+       |_ _ _| _ _ _ | _ _ _|
+       
+        |200 |OK|服务器成功返回了页面|
+       ```
+       
+       
+       statusText    HTTP状态的说明
+       //readyState
+          if(xhr.readyState == 4 && xhr.status == 200){
+            console.log(xhr.responseText);//responseText()     作为响应主体被返回的文本,还有一个responseXML
+             }
+          }
 ```
 
 function ajax(options){
